@@ -7,9 +7,14 @@ formEl.addEventListener('submit', (event) => {
 		elements: { email, password },
 	} = event.currentTarget;
 
-	if (email.value && password.value) {
-		event.currentTarget.reset();
+    if (email.value && password.value) {
+        const objectData = {
+            email: email.value,
+            password: password.value,
+        }
+        event.currentTarget.reset();
+        console.log(objectData);
 	} else {
-		alert('Please fill in all the fields!');
+		alert('Please, fill in all the fields!');
 	}
 });
